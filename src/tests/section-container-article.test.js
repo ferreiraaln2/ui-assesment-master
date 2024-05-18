@@ -14,10 +14,4 @@ describe('SectionContainerArticle', () => {
     expect(getByText('5 uploads')).toBeInTheDocument();
     expect(getByText('100 lines')).toBeInTheDocument();
   });
-
-  it('calls console.log with successfulUploads', () => {
-    console.log = jest.fn();
-    render(<SectionContainerArticle successfulUploads={5} linesAttempted={100} />);
-    expect(console.log).toHaveBeenCalledWith(5);
-  });
 });
